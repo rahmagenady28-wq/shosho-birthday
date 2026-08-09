@@ -1,14 +1,20 @@
 const surpriseBtn = document.getElementById("surpriseBtn");
 const messageSection = document.getElementById("message");
 
+
 surpriseBtn.addEventListener("click", () => {
+
     messageSection.scrollIntoView({
         behavior: "smooth"
     });
 
     createHearts();
-});
 
+    birthdayMusic.play();
+
+    musicBtn.innerHTML = "⏸️";
+    musicText.textContent = "Music is playing";
+});
 function createHearts() {
     for (let i = 0; i < 15; i++) {
         const heart = document.createElement("span");
